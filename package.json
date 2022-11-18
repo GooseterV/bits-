@@ -1,0 +1,25 @@
+{
+  "name": "bitsjs",
+  "version": "1.0.0",
+  "description": "binary and bits simplified for normal humans",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gooseterv/bitsjs.git"
+  },
+  "keywords": [
+    "bits",
+    "binary",
+    "bytes"
+  ],
+  "author": "goose v",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gooseterv/bitsjs/issues"
+  },
+  "homepage": "https://github.com/gooseterv/bitsjs#readme"
+}
