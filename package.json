@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/gooseterv/bitsjs/issues"
   },
-  "homepage": "https://github.com/gooseterv/bitsjs#readme"
+  "homepage": "https://github.com/gooseterv/bitsjs#readme",
+  "dependencies": {
+    "eslint": "^8.27.0"
+  }
 }
