@@ -5,3 +5,8 @@
         url("/MayanNumerals.woff") format("woff"),
         url("/MayanNumerals.ttf") format("truetype");
 }
+
+.mayan {
+    font-family: MayanNumerals;
+    text-orientation:upright;
+}
