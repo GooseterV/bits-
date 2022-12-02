@@ -1,12 +1,13 @@
 @font-face {
     font-family: MayanNumerals;
     src: 
-        url("/MayanNumerals.woff2") format("woff2"),
-        url("/MayanNumerals.woff") format("woff"),
-        url("/MayanNumerals.ttf") format("truetype");
+        url("./MayanNumerals.woff2") format("woff2"),
+        url("./MayanNumerals.woff") format("woff"),
+        url("./MayanNumerals.ttf") format("truetype");
 }
 
 .mayan {
     font-family: MayanNumerals;
     text-orientation:upright;
+    writing-mode:vertical-lr;
 }

@@ -39,6 +39,7 @@ class MayanNumeral extends Num {
 	constructor(value) {
 		super(value, 20, MayanNumeral.mappings);
 		this.stack = value.toString(20).split("").map(x=>parseInt(x,20)).map(x=>this.construct(x));
+		this.digits  = value.toString(20).split("").map(x=>parseInt(x,20));
 	}
 
 	construct(value) {
@@ -58,14 +59,14 @@ class MayanNumeral extends Num {
 	}
 
 	export() {
-		return this.stack.map(n =>
-			String.fromCharCode(0xD834, 0xDEE0 + n.map((x) => this.mappings[x]).reduce((a, b)=>a+b))
+		return this.digits.map(n =>
+			String.fromCharCode(0xD834, 0xDEE0 + n)
 		).join("");
 	}
 }
 
 class BabylonianNumeral extends Num {
-
+	static mappings = {};
 	static chars = {
 		0: "␣",
 		1: "𒐕",
@@ -87,6 +88,7 @@ class BabylonianNumeral extends Num {
 	constructor(value) {
 		super(value, 60, BabylonianNumeral.mappings);
 		this.stack = convert(value, 60).map(x=>this.construct(x));
+		this.digits = convert(value, 60);
 	}
 
 	construct(value) {
@@ -110,3 +112,34 @@ class BabylonianNumeral extends Num {
 	}
 
 }
+
+class RomanNumeral extends Num{
+	static mappings = {
+		1:"I",
+		5:"V",
+		10:"X",
+		50:"L",
+		100:"C",
+		500:"D",
+		1000:"M",
+
+		"V":5,
+		"X":10,
+		"L":50,
+		"C":100,
+		"D":500,
+		"M":1000
+
+	};
+	
+	constructor(value) {
+		super(value, 10, RomanNumeral.mappings);
+	}
+}
+
+module.exports = {
+	Num,
+	MayanNumeral,
+	BabylonianNumeral,
+	RomanNumeral
+};
